@@ -68,6 +68,7 @@ const EQUIPMENT = [
     brand: "Вывоз грунта и мусора",
     img: DUMPTRUCK_IMG,
     specs: [
+      { label: "Грузоподъёмность", value: "25 т" },
       { label: "Услуга", value: "Вывоз грунта и строительного мусора" },
       { label: "Погрузка", value: "2 500 ₽/час" },
     ],
@@ -419,7 +420,7 @@ export default function Index() {
             <div className="border border-border bg-card overflow-hidden">
               <div className="flex items-center gap-4 px-6 py-4 border-b border-border bg-steel/30">
                 <div className="w-2 h-8 bg-amber" />
-                <span className="font-display text-lg font-bold uppercase">Самосвал · Вывоз грунта и мусора</span>
+                <span className="font-display text-lg font-bold uppercase">Самосвал 25 т · Вывоз грунта и мусора</span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
                 {[
@@ -461,9 +462,9 @@ export default function Index() {
             {/* Контакты */}
             <div className="space-y-4">
               {[
-                { icon: "Phone", label: "Телефон", values: ["242-49-2", "+7 (982) 793-13-12"], links: ["tel:2424922", "tel:+79827931312"] },
+                { icon: "Phone", label: "Телефон", values: ["+7 (3412) 24-24-92", "+7 (982) 793-13-12"], links: ["tel:+73412242492", "tel:+79827931312"] },
                 { icon: "Mail", label: "E-mail", values: ["sts-izh@mail.ru"], links: ["mailto:sts-izh@mail.ru"] },
-                { icon: "MapPin", label: "Адрес", values: ["426056, Удмуртская Республика, г. Ижевск, ул. Лихвинцева, д. 46, кв. 64"], links: [null] },
+                { icon: "MapPin", label: "Адрес", values: ["Удмуртская Республика, г. Ижевск"], links: [null] },
                 { icon: "Clock", label: "Режим работы", values: ["Круглосуточно 24/7"], links: [null] },
               ].map((c, i) => (
                 <div key={i} className="flex items-start gap-5 p-5 bg-card border border-border hover:border-amber/50 transition-colors">
