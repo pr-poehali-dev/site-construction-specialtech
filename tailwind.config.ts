@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+		"./1778570619713246104.html"
 	],
 	prefix: "",
 	theme: {
@@ -18,12 +19,26 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				display: ['Oswald', 'sans-serif'],
+				body: ['IBM Plex Sans', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				amber: {
+					DEFAULT: 'hsl(42, 95%, 52%)',
+					dark: 'hsl(42, 95%, 38%)',
+					light: 'hsl(42, 95%, 70%)',
+				},
+				steel: {
+					DEFAULT: 'hsl(220, 12%, 16%)',
+					dark: 'hsl(220, 15%, 8%)',
+					light: 'hsl(220, 10%, 22%)',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -70,20 +85,12 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
 				}
 			},
 			animation: {
