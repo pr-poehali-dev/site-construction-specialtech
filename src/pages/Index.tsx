@@ -91,7 +91,7 @@ const SERVICES = [
 
 const PERKS = [
   { icon: "Clock", title: "Работаем 24/7", desc: "Круглосуточно, без выходных" },
-  { icon: "UserCheck", title: "Оператор в штате", desc: "Опытный машинист в цене" },
+  { icon: "FileCheck", title: "Работаем по договору", desc: "Официально, для физ- и юрлиц" },
   { icon: "Banknote", title: "Наличные и НДС", desc: "Работаем с физ- и юрлицами" },
   { icon: "Timer", title: "Минимум 4 часа", desc: "Гибкий формат заказа" },
 ];
