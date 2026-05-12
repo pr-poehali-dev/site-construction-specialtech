@@ -89,11 +89,11 @@ const SERVICES = [
   { icon: "Truck", title: "Доставка материалов", desc: "Доставка любых грузов манипулятором-длинномером грузоподъёмностью до 14 тонн." },
 ];
 
-const STATS = [
-  { value: "3", label: "Единицы техники" },
-  { value: "24/7", label: "Режим работы" },
-  { value: "4 ч", label: "Мин. заказ" },
-  { value: "14 т", label: "Макс. груз" },
+const PERKS = [
+  { icon: "Clock", title: "Работаем 24/7", desc: "Круглосуточно, без выходных" },
+  { icon: "UserCheck", title: "Оператор в штате", desc: "Опытный машинист в цене" },
+  { icon: "Banknote", title: "Наличные и НДС", desc: "Работаем с физ- и юрлицами" },
+  { icon: "Timer", title: "Минимум 4 часа", desc: "Гибкий формат заказа" },
 ];
 
 export default function Index() {
@@ -241,10 +241,15 @@ export default function Index() {
         <div className="absolute bottom-0 left-0 right-0 border-t border-border bg-background/90 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
-              {STATS.map((stat, i) => (
-                <div key={i} className="py-5 px-6 text-center">
-                  <div className="font-display text-2xl font-bold text-amber">{stat.value}</div>
-                  <div className="text-muted-foreground text-xs mt-1">{stat.label}</div>
+              {PERKS.map((p, i) => (
+                <div key={i} className="py-4 px-5 flex items-center gap-3">
+                  <div className="w-8 h-8 bg-amber/10 border border-amber/30 flex items-center justify-center flex-shrink-0">
+                    <Icon name={p.icon} size={15} className="text-amber" fallback="Check" />
+                  </div>
+                  <div>
+                    <div className="font-display font-bold text-sm uppercase tracking-wide leading-tight">{p.title}</div>
+                    <div className="text-muted-foreground text-xs mt-0.5">{p.desc}</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -569,7 +574,7 @@ export default function Index() {
             </div>
             <div className="text-center">
               <a href="tel:+79827931312" className="text-amber font-display text-sm hover:text-amber/80 transition-colors">+7 (982) 793-13-12</a>
-              <div className="text-muted-foreground text-xs mt-1">© 2024 СпецТехника18</div>
+              <div className="text-muted-foreground text-xs mt-1">© 2026 СпецТехника18</div>
             </div>
           </div>
         </div>
